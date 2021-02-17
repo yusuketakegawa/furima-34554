@@ -1,4 +1,4 @@
-<mxfile host="65bd71144e" modified="2021-02-17T02:15:35.706Z" agent="5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.53.2 Chrome/87.0.4280.141 Electron/11.2.1 Safari/537.36" etag="DchKuHPecLCjpWpnd9B0" version="14.2.4" type="embed">
+<mxfile host="65bd71144e" modified="2021-02-17T03:09:05.964Z" agent="5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.53.2 Chrome/87.0.4280.141 Electron/11.2.1 Safari/537.36" etag="Hlt4l48lj-hO-v_hppy7" version="14.2.4" type="embed">
     <diagram id="HAo1lfUzY9jgl7J7SbRj" name="ページ1">
         <mxGraphModel dx="708" dy="520" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
@@ -251,7 +251,7 @@
                     <mxGeometry x="420" y="290" width="20" height="20" as="geometry"/>
                 </mxCell>
                 <mxCell id="140" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;ricty diminished&amp;#34; , &amp;#34;menlo&amp;#34; , &amp;#34;monaco&amp;#34; , &amp;#34;courier new&amp;#34; , monospace ; font-size: 14px ; line-height: 21px&quot;&gt;item_explanation&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
-                    <mxGeometry x="450" y="280" width="130" height="30" as="geometry"/>
+                    <mxGeometry x="454" y="280" width="130" height="30" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>

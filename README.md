@@ -28,7 +28,7 @@
 | user             |  references| null: false, foreign_key: true |
 | status_id        |  integer   | null: false                    |
 | delivery_fee_id  |  integer   | null: false                    |
-| region_id        |  integer   | null: false                    |
+| prefecture_id    |  integer   | null: false                    |
 | shipping_date_id |  integer   | null: false                    |
 
 ### Association
@@ -40,7 +40,7 @@
 | Colum     |  Type     | Option                           |
 |---------- |--------------| ------------------------------| 
 | user      |  references  | null: false, foreign_key: true|
-| item     |  references   | null: false, foreign_key: true|
+| item      |  references   | null: false, foreign_key: true|
 
 ### Association
 -belongs_to :user
@@ -55,8 +55,8 @@
 | municipality  |  string    | null: false                    |
 | prefecture_id |  integer   | null: false                    |
 | building      |  string    |                                |
-| postal code   |  string    | null: false                    |
-| phone number  |  string    | null: false                    |
+| postal_code   |  string    | null: false                    |
+| phone_number  |  string    | null: false                    |
 | buy           |  references| null: false, foreign_key: true |
 
 ### Association
