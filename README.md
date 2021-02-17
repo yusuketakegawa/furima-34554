@@ -27,9 +27,9 @@
 | price            |  integer   | null: false                    |
 | user             |  references| null: false, foreign_key: true |
 | status_id        |  integer   | null: false                    |
-| delivery_fee_id  |  integer   | null: false, foreign_key: true |
+| delivery_fee_id  |  integer   | null: false                    |
 | region_id        |  integer   | null: false                    |
-| shipping_date_id |  integer   | null: false, foreign_key: true |
+| shipping_date_id |  integer   | null: false                    |
 
 ### Association
 -has one :buy
@@ -51,12 +51,12 @@
 
 | Colum         |  Type      | Option                         |
 |---------------|------------| ------------------------------ | 
-| address       |  string    | null: false,                   |
-| municipality  |  string    | null: false,                   |
-| prefecture_id |  integer   | null: false,                   |
+| address       |  string    | null: false                    |
+| municipality  |  string    | null: false                    |
+| prefecture_id |  integer   | null: false                    |
 | building      |  string    |                                |
-| postal code   |  string    | null: false,                   |
-| phone number  |  string    | null: false,                   |
+| postal code   |  string    | null: false                    |
+| phone number  |  string    | null: false                    |
 | buy           |  references| null: false, foreign_key: true |
 
 ### Association
