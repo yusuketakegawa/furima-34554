@@ -5,7 +5,7 @@
 | Colum                 |  Type     | Option                   |
 |-----------------------|-----------| -------------------------| 
 | email                 |  string   | null: false   unique:true|
-| encrypted_password    |  integer  | null: false              |
+| encrypted_password    |  string   | null: false              |
 | nickname              |  string   | null: false              |
 | birthday              |  date     | null: false              |
 | last_name             |  string   | null: false              |
@@ -14,8 +14,8 @@
 | first_name_kana       |  string   | null: false              |
 
 ### Association
--has many :items
--has many :buys
+-has_many :items
+-has_many :buys
 
 ##  itemsテーブル
 
@@ -32,7 +32,7 @@
 | shipping_date_id |  integer   | null: false                    |
 
 ### Association
--has one :buy
+-has_one :buy
 -belongs_to :user
 
 ## buys テーブル
@@ -45,7 +45,7 @@
 ### Association
 -belongs_to :user
 -belongs_to :item
--has one :shipping
+-has_one :shipping
 
 ## shipping テーブル
 
