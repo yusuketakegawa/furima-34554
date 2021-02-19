@@ -5,9 +5,14 @@ class Item < ApplicationRecord
   belongs_to :status
   belongs_to :category
   belongs_to :delivery_fee
+  
   belongs_to :user
 
+  has_one_attached :image
+
   validates :name, :item_explanation,  presence: true
+  validates :image, presence: true
+  
 
   validates :prefecture_id,     presence:true,   numericality: { other_than: 1 }
   validates :shipping_date_id,  presence:true,   numericality: { other_than: 1 }
