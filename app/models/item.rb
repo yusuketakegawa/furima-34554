@@ -9,19 +9,19 @@ class Item < ApplicationRecord
 
   has_one_attached :image
 
-  validates :name, presence: true
-  validates :item_explanation, presence: true
-  validates :image, presence: true
-  
+  with_options presence: true do
+  validates :name
+  validates :item_explanation
+  validates :image
+  validates :price,  format: {with: /\A[0-9]+\z/}, numericality: { only_integer: true, greater_than: 300, less_than: 9999999}
+  end
 
-  validates :prefecture_id,     presence: true,   numericality: { other_than: 1 }
-  validates :shipping_date_id,  presence: true,   numericality: { other_than: 1 }
-  validates :status_id,         presence: true,   numericality: { other_than: 1 }
-  validates :category_id,       presence: true,   numericality: { other_than: 1 }
-  validates :delivery_fee_id, presence: true,  numericality: { other_than: 1 }
+  with_options presence: true,   numericality: { other_than: 1 } do
+  validates :prefecture_id
+  validates :shipping_date_id
+  validates :status_id
+  validates :category_id
+  validates :delivery_fee_id
+  end
 
-
-  validates :price, presence: true
-  validates :price, format: {with: /\A[0-9]+\z/}
-  validates :price, numericality: { only_integer: true, greater_than: 300, less_than: 9999999}
 end
