@@ -7,4 +7,4 @@ window.addEventListener('load', () => {
      const saleValue = document.getElementById("profit")
      saleValue.innerHTML =Math.floor (inputValue * 0.9)
    })
-})
+});
