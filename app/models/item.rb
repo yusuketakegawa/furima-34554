@@ -7,6 +7,7 @@ class Item < ApplicationRecord
   belongs_to_active_hash :delivery_fee
   belongs_to :user
 
+
   has_one_attached :image
 
   with_options presence: true do
@@ -23,5 +24,7 @@ class Item < ApplicationRecord
   validates :category_id
   validates :delivery_fee_id
   end
+
+  has_one :buy
 
 end
