@@ -23,7 +23,7 @@ RSpec.describe BuyShipping, type: :model do
       expect(@buy_shipping.errors.full_messages).to include("Postal code can't be blank")
     end
     it 'postal_codeが半角のハイフンを含んだ正しい形式でないと登録できない' do
-      @buy_shipping.postal_code = 1_234_566
+      @buy_shipping.postal_code = '1_234_566'
       @buy_shipping.valid?
       expect(@buy_shipping.errors.full_messages).to include('Postal code is invalid')
     end
@@ -53,17 +53,17 @@ RSpec.describe BuyShipping, type: :model do
       expect(@buy_shipping.errors.full_messages).to include("Phone number can't be blank")
     end
     it 'phone_numerが12以上だと登録できない' do
-      @buy_shipping.phone_number = 123_456_789_012
+      @buy_shipping.phone_number = '123_456_789_012'
       @buy_shipping.valid?
       expect(@buy_shipping.errors.full_messages).to include('Phone number is invalid')
     end
     it 'phone_numberに-等がついていると登録できない' do
-      @buy_shipping.phone_number = 1234 - 6_789_012
+      @buy_shipping.phone_number = '1234 - 6_789_012'
       @buy_shipping.valid?
       expect(@buy_shipping.errors.full_messages).to include('Phone number is invalid')
     end
     it 'phone_numberが英数字混同では登録できない' do
-      @buy_shipping.phone_number = "3245a673222"
+      @buy_shipping.phone_number = '3245a673222'
       @buy_shipping.valid?
       expect(@buy_shipping.errors.full_messages).to include('Phone number is invalid')
     end
