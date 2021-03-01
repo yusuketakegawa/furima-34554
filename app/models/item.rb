@@ -6,6 +6,7 @@ class Item < ApplicationRecord
   belongs_to_active_hash :category
   belongs_to_active_hash :delivery_fee
   belongs_to :user
+  has_one :buy
 
 
   has_one_attached :image
@@ -25,6 +26,6 @@ class Item < ApplicationRecord
   validates :delivery_fee_id
   end
 
-  has_one :buy
+ 
 
 end
