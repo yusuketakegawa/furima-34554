@@ -8,24 +8,20 @@ class Item < ApplicationRecord
   belongs_to :user
   has_one :buy
 
-
   has_one_attached :image
 
   with_options presence: true do
-  validates :name
-  validates :item_explanation
-  validates :image
-  validates :price, numericality: { only_integer: true, greater_than: 300, less_than: 9999999}
+    validates :name
+    validates :item_explanation
+    validates :image
+    validates :price, numericality: { only_integer: true, greater_than: 300, less_than: 9_999_999 }
   end
 
-  with_options presence: true,   numericality: { other_than: 1 } do
-  validates :prefecture_id
-  validates :shipping_date_id
-  validates :status_id
-  validates :category_id
-  validates :delivery_fee_id
+  with_options presence: true, numericality: { other_than: 1 } do
+    validates :prefecture_id
+    validates :shipping_date_id
+    validates :status_id
+    validates :category_id
+    validates :delivery_fee_id
   end
-
- 
-
 end
