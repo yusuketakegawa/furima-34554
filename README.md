@@ -35,7 +35,7 @@
 -has_one :buy
 -belongs_to :user
 
-## buys テーブル
+## buy テーブル
 
 | Colum     |  Type     | Option                           |
 |---------- |--------------| ------------------------------| 
