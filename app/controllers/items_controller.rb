@@ -24,6 +24,8 @@ class ItemsController < ApplicationController
   end
 
   def destroy
+    @item.destroy
+    redirect_to root_path
   end
 
   def edit
@@ -49,6 +51,6 @@ class ItemsController < ApplicationController
   end
 
   def move_to_root_path
-    redirect_to root_path if current_user.id != @item.user_id || @item.buy.presence 
+    redirect_to root_path if current_user.id != @item.user_id || @item.buy.present?
   end
 end
